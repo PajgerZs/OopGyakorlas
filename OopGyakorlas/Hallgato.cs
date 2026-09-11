@@ -8,10 +8,8 @@ namespace OopGyakorlas
 {
     public class Hallgato : Szemely
     {
-        // 8. Feladat: Privát háttérmező
         private string neptunKod;
 
-        // 8. Feladat: NeptunKod property ellenőrzéssel (max. 6 karakter)
         public string NeptunKod
         {
             get { return neptunKod; }
@@ -28,9 +26,11 @@ namespace OopGyakorlas
             }
         }
 
+        // 9. Feladat: Nyilvános lekérdezés a protected névre a listás kiíráshoz
+        public new string Nev => base.Nev;
+
         public Hallgato(string nev, int kor, string neptunKod) : base(nev, kor)
         {
-            // A property-t állítjuk be, hogy lefusson a 6 karakteres ellenőrzés
             NeptunKod = neptunKod;
         }
 
