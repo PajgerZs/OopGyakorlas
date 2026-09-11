@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace OopGyakorlas
 {
-    internal class Szemely
+    public class Szemely
     {
         public string Nev;
         public int Eletkor;
+
+        // 2. Feladat: Konstruktor a név és az életkor beállítására
+        public Szemely(string nev, int eletkor)
+        {
+            Nev = nev;
+            Eletkor = eletkor;
+        }
     }
 }
