@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankSzamla.cs" />
+    <Compile Include="Dolgozo.cs" />
     <Compile Include="Hallgato.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

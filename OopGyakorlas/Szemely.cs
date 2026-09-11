@@ -8,9 +8,7 @@ namespace OopGyakorlas
 {
     public class Szemely
     {
-        // 7. Feladat: A nev mező mostantól protected (védett)
         protected string Nev;
-
         private int eletkor;
 
         public int Kor
@@ -38,6 +36,12 @@ namespace OopGyakorlas
         public override string ToString()
         {
             return $"Személy -> Név: {Nev}, Életkor: {Kor} év";
+        }
+
+        // 10. Feladat: Virtuális metódus a polimorfizmushoz
+        public virtual void Bemutatkozas()
+        {
+            Console.WriteLine($"Személy vagyok, a nevem: {Nev}.");
         }
     }
 }

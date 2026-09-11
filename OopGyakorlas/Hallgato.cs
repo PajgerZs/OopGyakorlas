@@ -26,7 +26,6 @@ namespace OopGyakorlas
             }
         }
 
-        // 9. Feladat: Nyilvános lekérdezés a protected névre a listás kiíráshoz
         public new string Nev => base.Nev;
 
         public Hallgato(string nev, int kor, string neptunKod) : base(nev, kor)
@@ -37,6 +36,12 @@ namespace OopGyakorlas
         public void HallgatoInfo()
         {
             Console.WriteLine($"[Hallgató adatai] Név: {Nev}, Életkor: {Kor}, Neptun-kód: {NeptunKod}");
+        }
+
+        // 10. Feladat: Eltérő viselkedés a hallgató esetén
+        public override void Bemutatkozas()
+        {
+            Console.WriteLine($"Hallgató vagyok. Név: {Nev}, Életkor: {Kor}, Neptun-kód: {NeptunKod}.");
         }
     }
 }

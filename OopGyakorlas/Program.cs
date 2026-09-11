@@ -13,20 +13,21 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- 9. Feladat: Hallgatók listája ---");
+            Console.WriteLine("--- 10. Feladat: Polimorfizmus tesztelése ---");
 
-            // Lista létrehozása és feltöltése több Hallgato példánnyal
-            List<Hallgato> hallgatok = new List<Hallgato>()
+            // Az ősosztály (Szemely) típusú listába mindkét leszármazott elhelyezhető:
+            List<Szemely> resztvevok = new List<Szemely>()
             {
                 new Hallgato("Kovács Péter", 20, "KOV123"),
+                new Dolgozo("Szabó István", 42, 550000),
                 new Hallgato("Nagy Anna", 21, "NAG456"),
-                new Hallgato("Tóth Balázs", 22, "TOT789")
+                new Dolgozo("Kiss Eszter", 35, 620000)
             };
 
-            // Végigiterálunk a listán és kiírjuk a hallgatók nevét
-            foreach (Hallgato hallgato in hallgatok)
+            // Ugyanazt a metódust hívjuk meg minden elemen, mégis eltérően viselkednek:
+            foreach (Szemely szemely in resztvevok)
             {
-                Console.WriteLine($"Hallgató neve: {hallgato.Nev}");
+                szemely.Bemutatkozas();
             }
         }
     }
