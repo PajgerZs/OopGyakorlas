@@ -9,13 +9,33 @@ namespace OopGyakorlas
     public class Szemely
     {
         public string Nev;
-        public int Eletkor;
 
-        // 2. Feladat: Konstruktor a név és az életkor beállítására
-        public Szemely(string nev, int eletkor)
+        // 3. Feladat: Privát háttérmező (backing field)
+        private int eletkor;
+
+        // 3. Feladat: Kor property ellenőrzéssel
+        public int Kor
+        {
+            get { return eletkor; }
+            set
+            {
+                if (value >= 0)
+                {
+                    eletkor = value;
+                }
+                else
+                {
+                    Console.WriteLine("Hiba: Az életkor nem lehet negatív!");
+                }
+            }
+        }
+
+        // A konstruktorban érdemes a Kor property-t beállítani, 
+        // így a kezdeti értékadáskor is lefut az ellenőrzés
+        public Szemely(string nev, int kor)
         {
             Nev = nev;
-            Eletkor = eletkor;
+            Kor = kor;
         }
     }
 }

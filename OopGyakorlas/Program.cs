@@ -10,10 +10,13 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            // 2. Feladat: Példányosítás konstruktor segítségével
+            // 3. Feladat: Példányosítás és a Kor property tesztelése
             Szemely sz1 = new Szemely("Kovács Péter", 20);
+            Console.WriteLine($"Név: {sz1.Nev}, Kor: {sz1.Kor}");
 
-            Console.WriteLine($"Név: {sz1.Nev}, Életkor: {sz1.Eletkor}");
+            // Próbáljuk meg negatív értékre állítani:
+            sz1.Kor = -5; // Kiírja a hibaüzenetet, és nem módosul
+            Console.WriteLine($"Módosítási kísérlet utáni kor: {sz1.Kor}");
         }
     }
 }
