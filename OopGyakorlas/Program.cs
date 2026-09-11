@@ -10,13 +10,11 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            // 3. Feladat: Példányosítás és a Kor property tesztelése
+            // 4. Feladat: ToString() metódus tesztelése
             Szemely sz1 = new Szemely("Kovács Péter", 20);
-            Console.WriteLine($"Név: {sz1.Nev}, Kor: {sz1.Kor}");
 
-            // Próbáljuk meg negatív értékre állítani:
-            sz1.Kor = -5; // Kiírja a hibaüzenetet, és nem módosul
-            Console.WriteLine($"Módosítási kísérlet utáni kor: {sz1.Kor}");
+            // A Console.WriteLine automatikusan meghívja a ToString()-et:
+            Console.WriteLine(sz1);
         }
     }
 }

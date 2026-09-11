@@ -9,11 +9,8 @@ namespace OopGyakorlas
     public class Szemely
     {
         public string Nev;
-
-        // 3. Feladat: Privát háttérmező (backing field)
         private int eletkor;
 
-        // 3. Feladat: Kor property ellenőrzéssel
         public int Kor
         {
             get { return eletkor; }
@@ -30,12 +27,16 @@ namespace OopGyakorlas
             }
         }
 
-        // A konstruktorban érdemes a Kor property-t beállítani, 
-        // így a kezdeti értékadáskor is lefut az ellenőrzés
         public Szemely(string nev, int kor)
         {
             Nev = nev;
             Kor = kor;
+        }
+
+        // 4. Feladat: ToString felüldefiniálása (override)
+        public override string ToString()
+        {
+            return $"Személy -> Név: {Nev}, Életkor: {Kor} év";
         }
     }
 }
