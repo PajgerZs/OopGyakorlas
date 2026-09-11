@@ -10,12 +10,12 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            // 6. Feladat: Hallgató példányosítása és öröklött tagok elérése
-            Console.WriteLine("--- 6. Feladat: Hallgató tesztelése ---");
-            Hallgato hallgato = new Hallgato("Nagy Anna", 21, "ABC123");
+            Console.WriteLine("--- 7. Feladat: Protected adattag tesztelése ---");
+            Hallgato h1 = new Hallgato("Nagy Anna", 21, "ABC123");
 
-            // Az örökölt tulajdonságok (Nev, Kor) és a saját adattag (neptunKod) kiírása
-            Console.WriteLine($"Név: {hallgato.Nev}, Kor: {hallgato.Kor}, Neptun-kód: {hallgato.neptunKod}");
+            // A hallgato.Nev közvetlen elérése itt most fordítási hibát adna (mert protected),
+            // de a Hallgato osztály belső metódusa gond nélkül eléri:
+            h1.HallgatoInfo();
         }
     }
 }

@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 
 namespace OopGyakorlas
 {
-    // A kettőspont jelzi az öröklődést: a Hallgato az ősosztály (Szemely) gyermeke
     public class Hallgato : Szemely
     {
-        // 6. Feladat: Saját adattag
         public string neptunKod;
 
-        // A konstruktor a 'base' kulcsszóval hívja meg az ősosztály (Szemely) konstruktorát
         public Hallgato(string nev, int kor, string neptunKod) : base(nev, kor)
         {
             this.neptunKod = neptunKod;
+        }
+
+        // 7. Feladat: A védett 'Nev' mező közvetlen elérése a leszármazott osztályban
+        public void HallgatoInfo()
+        {
+            Console.WriteLine($"[Hallgató adatai] Név: {Nev}, Életkor: {Kor}, Neptun-kód: {neptunKod}");
         }
     }
 }

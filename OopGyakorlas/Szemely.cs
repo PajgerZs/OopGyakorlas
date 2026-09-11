@@ -8,7 +8,9 @@ namespace OopGyakorlas
 {
     public class Szemely
     {
-        public string Nev;
+        // 7. Feladat: A nev mező mostantól protected (védett)
+        protected string Nev;
+
         private int eletkor;
 
         public int Kor
@@ -33,7 +35,6 @@ namespace OopGyakorlas
             Kor = kor;
         }
 
-        // 4. Feladat: ToString felüldefiniálása (override)
         public override string ToString()
         {
             return $"Személy -> Név: {Nev}, Életkor: {Kor} év";
