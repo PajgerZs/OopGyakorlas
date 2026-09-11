@@ -8,17 +8,35 @@ namespace OopGyakorlas
 {
     public class Hallgato : Szemely
     {
-        public string neptunKod;
+        // 8. Feladat: Privát háttérmező
+        private string neptunKod;
+
+        // 8. Feladat: NeptunKod property ellenőrzéssel (max. 6 karakter)
+        public string NeptunKod
+        {
+            get { return neptunKod; }
+            set
+            {
+                if (value != null && value.Length <= 6)
+                {
+                    neptunKod = value;
+                }
+                else
+                {
+                    Console.WriteLine("Hiba: A Neptun-kód legfeljebb 6 karakter hosszú lehet!");
+                }
+            }
+        }
 
         public Hallgato(string nev, int kor, string neptunKod) : base(nev, kor)
         {
-            this.neptunKod = neptunKod;
+            // A property-t állítjuk be, hogy lefusson a 6 karakteres ellenőrzés
+            NeptunKod = neptunKod;
         }
 
-        // 7. Feladat: A védett 'Nev' mező közvetlen elérése a leszármazott osztályban
         public void HallgatoInfo()
         {
-            Console.WriteLine($"[Hallgató adatai] Név: {Nev}, Életkor: {Kor}, Neptun-kód: {neptunKod}");
+            Console.WriteLine($"[Hallgató adatai] Név: {Nev}, Életkor: {Kor}, Neptun-kód: {NeptunKod}");
         }
     }
 }

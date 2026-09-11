@@ -10,11 +10,15 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("--- 7. Feladat: Protected adattag tesztelése ---");
+            Console.WriteLine("--- 8. Feladat: Neptun-kód validáció tesztelése ---");
             Hallgato h1 = new Hallgato("Nagy Anna", 21, "ABC123");
+            h1.HallgatoInfo();
 
-            // A hallgato.Nev közvetlen elérése itt most fordítási hibát adna (mert protected),
-            // de a Hallgato osztály belső metódusa gond nélkül eléri:
+            // Teszt: Próbáljunk beállítani 6 karakternél hosszabbat
+            Console.WriteLine("\nKísérlet 6 karakternél hosszabb kód beállítására:");
+            h1.NeptunKod = "TULHOSSZUKOD"; // Hibaüzenetet kell dobnia
+
+            // Ellenőrzés: Az eredeti kód marad érvényben
             h1.HallgatoInfo();
         }
     }
