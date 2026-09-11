@@ -10,16 +10,12 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            // 5. Feladat tesztelése: BankSzamla
-            Console.WriteLine("--- 5. Feladat: BankSzámla tesztelése ---");
-            BankSzamla szamla = new BankSzamla(10000);
+            // 6. Feladat: Hallgató példányosítása és öröklött tagok elérése
+            Console.WriteLine("--- 6. Feladat: Hallgató tesztelése ---");
+            Hallgato hallgato = new Hallgato("Nagy Anna", 21, "ABC123");
 
-            szamla.Betesz(5000);   // Egyenleg: 15000 Ft lesz
-            szamla.Kivesz(3000);   // Egyenleg: 12000 Ft lesz
-            szamla.Kivesz(20000);  // Hibaüzenet, mert az egyenleg nem lehet negatív!
-
-            Console.WriteLine($"Végső egyenleg: {szamla.Egyenleg} Ft");
+            // Az örökölt tulajdonságok (Nev, Kor) és a saját adattag (neptunKod) kiírása
+            Console.WriteLine($"Név: {hallgato.Nev}, Kor: {hallgato.Kor}, Neptun-kód: {hallgato.neptunKod}");
         }
     }
 }
-
