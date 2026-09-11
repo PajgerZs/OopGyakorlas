@@ -10,11 +10,16 @@ namespace OopGyakorlas
     {
         static void Main(string[] args)
         {
-            // 4. Feladat: ToString() metódus tesztelése
-            Szemely sz1 = new Szemely("Kovács Péter", 20);
+            // 5. Feladat tesztelése: BankSzamla
+            Console.WriteLine("--- 5. Feladat: BankSzámla tesztelése ---");
+            BankSzamla szamla = new BankSzamla(10000);
 
-            // A Console.WriteLine automatikusan meghívja a ToString()-et:
-            Console.WriteLine(sz1);
+            szamla.Betesz(5000);   // Egyenleg: 15000 Ft lesz
+            szamla.Kivesz(3000);   // Egyenleg: 12000 Ft lesz
+            szamla.Kivesz(20000);  // Hibaüzenet, mert az egyenleg nem lehet negatív!
+
+            Console.WriteLine($"Végső egyenleg: {szamla.Egyenleg} Ft");
         }
     }
 }
+
